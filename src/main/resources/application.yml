@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+# database 연동 설정
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#    각자 PC에 만들어 놓은 Database 이름을 써야 한다.
+    url: jdbc:mysql://localhost:3306/db_codingrecipe?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+#    mysql 에 생성한 사용자 계정 정보를 써야 한다.
+    username: user_coding recipe
+    password: 1234
+  thymeleaf:
+    cache: false
+
+
+  # spring data jpa 설정
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    open-in-view: false
+    show-sql: true
+    hibernate:
+      ddl-auto: update # 바뀌는게 있을 때만 변경을 해줌 그렇지 않으면 테이블이 계속 유지

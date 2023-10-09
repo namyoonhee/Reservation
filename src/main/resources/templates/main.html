@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>main</title>
+</head>
+<body>
+    session 값 확인: <p th:test="${session.loginEmail}"></p>
+    <!-- session 에 담겨있는 파라미터 값(loginEmail)을 사용하는 방식 -->
+    <a href="/member/update">내 정보 수정하기</a>
+    <a href="/member/logout">로그아웃</a>
+<!-- 로그인 이라는건 세션에 내 정보를 담았다고 본다면 로그아웃은 세션에서 내 정보를 뺀다라고 본다 -->
+</body>
+</html>
